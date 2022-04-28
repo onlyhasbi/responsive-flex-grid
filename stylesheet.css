@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  border-radius: 0.25rem;
+}
+
+.btn__outline {
+  border: 1px solid #000;
+  color: #000;
+  letter-spacing: 0.05rem;
+}
+
+.btn__active {
+  border: 0;
+  background-color: #fff;
+}
+
+.tomato .btn__active {
+  color: tomato;
+}
+
+.skyblue .btn__active {
+  color: skyblue;
+}
+
+.gold .btn__active {
+  color: gold;
+}
+
+.container {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 40%;
+  margin: 0 auto;
+  max-width: 1024px;
+  place-items: center;
+  width: 100%;
+}
+
+/* Header */
+
+.header {
+  margin: 5rem auto;
+}
+
+.header__heading {
+  margin-bottom: 1.3rem;
+}
+
+.header__description {
+  line-height: 1.5;
+}
+
+.header__image {
+  width: 100%;
+  justify-self: start;
+}
+
+.header__image img {
+  max-width: 100%;
+  height: 25rem;
+}
+
+.header__text {
+  justify-self: end;
+  max-width: 25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, 100%);
+    overflow: hidden;
+  }
+
+  .header {
+    margin-top: 3rem;
+  }
+
+  .header__image img {
+    display: block;
+    height: auto;
+    max-height: 20rem;
+    margin: 0 auto;
+  }
+
+  .header__text {
+    margin: 0;
+    width: 25rem;
+    margin: 0 auto;
+    max-width: 100%;
+    order: 1;
+    text-align: center;
+  }
+}
+
+.group__box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  flex: 1 1 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.box__1 {
+  background: tomato;
+}
+
+.box__2 {
+  background: blueviolet;
+}
+
+.box__3 {
+  background: skyblue;
+}
+
+.box__4 {
+  background: goldenrod;
+}
+
+/* Card */
+
+.card__group {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-around;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+  height: 55vh;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  opacity: 0.9;
+  color: cfcfcf;
+}
+
+.card__title {
+  margin-bottom: 1rem;
+}
+
+.card__text {
+  margin-bottom: auto;
+}
+
+.card__button {
+  font-size: 1.2rem;
+  display: block;
+  padding: 0.75rem 0;
+}
+
+.tomato {
+  background: tomato;
+}
+
+.skyblue {
+  background: skyblue;
+}
+
+.gold {
+  background: gold;
+}
